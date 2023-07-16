@@ -146,7 +146,7 @@ input {
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 .date{
-  margin-top: -105%;
+  margin-top: -128%;
   margin-left: .4rem;
   box-shadow: none;
   font-size:10px;
@@ -158,7 +158,7 @@ input {
 }
 button {
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
   background: #1DA1F2;
   height: 40px;
   border-radius: 20px;
@@ -193,6 +193,10 @@ h1 {
   top: 0;
   left: 0;
 }
+#res{
+  position: absolute;
+  
+}
     </style>
 </head>
 <body>
@@ -208,18 +212,40 @@ h1 {
 
     </div>
     <div class="brand-title">INDUSTRIES PRIVATE LIMITED</div>
+    <form class="formm" method="post" id="form">
+    <div id="res" style="color:green;font-size: 14px;"></div>
     <div class="inputs">
-      <input type="number" placeholder="heading" />
-      <input type="number" placeholder="heading" />
-      <input type="number" placeholder="heading" />
-      <input type="number" placeholder="heading" />
-      <button type="submit">Submit</button>
+      <input type="date" name="DATE"  style="color: rgb(0, 110, 255);"/>
+      <input type="number" name="SCRAPPING" placeholder="S C R A P P I N G" />
+      <input type="number" name="PLANTGRADE"placeholder="P L A N T            GRADE" />
+      <input type="number" name="KALLUPPUGRADE"placeholder="K A L L U P P U  GRADE" />
+      <input type="number" name="RIDGESTOCK"placeholder="R I D G E  STOCK" />
+      <button name ="btn" type="submit" href="/">Submit</button>
     </div>
     <input class = "date" name="date" id="date">
     <a href="https://twitter.com/prathkum">MADE BY NELLAIAPPAN S</a>
-  </div>
+  </div></form>
 </body>
 <script type="text/javascript">
   document.getElementById('date').value = Date();
+
+  let url ='https://script.google.com/macros/s/AKfycbwC4qA4Sc3YaNqCUmNapTzHZ3B_afXcFGUS5a4x7Ko4VIjVi8azAq7f4BzgQoeTc_8/exec';
+    let form=document.querySelector('#form');
+    form.addEventListener("submit",(e)=>{
+        e.target.btn.innerHTML="Submitting.....";
+        let d =new FormData(form);
+        fetch(url,{method:"POST",
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes)=>{
+            e.target.btn.innerHTML="Submit";
+            document.getElementById("res").innerHTML=finalRes;
+            form.reset();
+             setTimeout(()=>{
+                document.getElementById("res").innerHTML=""; 
+             },3000)        
+        })
+        e.preventDefault();
+    })
 </script>
 </html>
