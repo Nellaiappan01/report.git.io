@@ -1,143 +1,214 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Daily Report</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-      @media screen {390
-        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+        @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-      html, body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 14px;
-      color: #666;
-      }
-      h1 {
-      margin: 10px 22px 40px;
-      font-weight: 400;
-      color: #1c87c9;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
 
 
-      }
-      p {
-      margin: 0 0 5px;
-      }
-    
-      .main-block{
-      width: 100rem;
-      height: 100rem;
-      box-shadow: 0 2px 5px #f5f5f5; 
-      background: #f5f5f5; 
-      }
-      
-    
-      input, textarea {
-    
-      width: calc(50% - 18px);
-      padding: 25px;
-      margin: 20px;
-      border: 1px solid #1c87c9;
-      outline: none;
-      border-radius:5px;
-      }
-      input::placeholder {
-      color: #666;
-      }
-      button {
-      width: 25%;
-      padding: 10px;
-      margin-left: 3%;
-      margin-top: 3%;
-      border: none;
-      background: #1c87c9; 
-      font-size: 40px;
-      font-weight: 400;
-      color: #fff;
-      }
-      button:hover {
-      background: #2371a0;
-      }    
-    
-      .left-part, form {
-      width: 50%;
-      }
-      .fa-envelope {
-      margin-top: 0;
-      margin-left: 20%;
-      }
-      .fa-at {
-      margin-top: -10%;
-      margin-left: 65%;
-      }
-      .fa-mail-bulk {
-      margin-top: 2%;
-      
-      }
-     .formm{
-    
-      margin-top:10%;
-      margin-left:10%;
-      width: 100%;
-      min-height: 100vh;
-    
-     }
-    input{
-      margin: 2.5rem;
-    }
-    }
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ecf0f3;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: poppins;
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 680px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+
+.brand-title {
+  width: 30rem;
+  margin-left: -100px;
+  margin-top: 2rem;
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-decoration-line:underline ;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  text-underline-position: under
+  
+}
+.content {
+	position: relative;
+}
+
+.content h2 {
+  margin-left:9rem;
+  margin-top:1rem;
+	color: #fff;
+	font-size: 4em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+  letter-spacing: 15px;
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #dbdddd;
+}
+
+.content h2:nth-child(2) {
+	color: #9bd9f5;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+.brand-title {
+  margin-top: 3rem;
+	color: #6968c7;
+	transform: translate(0%, -5%);
+}
+
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+label, input, button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button {
+  color: white;
+  margin-top: 20px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+  background-color:#0b81f0;
+  
+}
+
+a {
+  position: absolute;
+  font-size: 8px;
+  font-weight:200;
+  bottom: 4px;
+  right: 4px;
+  text-decoration: none;
+  color: black;
+  background: rgba(177, 176, 175, 0.2);
+  border-radius: 5px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
     </style>
-  </head>
-  <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-envelope"></i>
-        <i class="fas fa-at"></i>
-
-
-        <i class="fas fa-mail-bulk"></i>
-      </div>
-       
-
-
-    <form class="formm" method="post" id="form">
-        <h1 style="color:rgb(29, 25, 219);font-size: 20px;font-weight: bolder;">ESCEE INDUSTRIES PRIVATE LIMITED </h1>
-        <div id="res" style="color:green;font-size: 14px;"></div>
-        <div>
-            <input type="date" style="width: 15rem;" name="DATE" placeholder="date">
-            <br><input class="fname" type="number" name="SCRAPPING" placeholder="SCRAPPING">
-            <input type="number" name="PLANTGRADE" placeholder="PLANT GRADE">
-            <input type="number" name="KALLUPPUGRADE" placeholder="KALLUPPU GRADE">
-            <input type="number" name="RIDGESTOCK" placeholder="RIDGE STOCK 
-          ">
-        </div>
-            <button name ="btn" type="submit" href="/">Submit</button>
-      
-    </div></form>
-  </body>
-  <script>
-    let url ='https://script.google.com/macros/s/AKfycbwC4qA4Sc3YaNqCUmNapTzHZ3B_afXcFGUS5a4x7Ko4VIjVi8azAq7f4BzgQoeTc_8/exec';
-    let form=document.querySelector('#form');
-    form.addEventListener("submit",(e)=>{
-        e.target.btn.innerHTML="Submitting.....";
-        let d =new FormData(form);
-        fetch(url,{method:"POST",
-            body:d
-        }).then((res)=>res.text())
-        .then((finalRes)=>{
-            e.target.btn.innerHTML="Submit";
-            document.getElementById("res").innerHTML=finalRes;
-            form.reset();
-             setTimeout(()=>{
-                document.getElementById("res").innerHTML=""; 
-             },3000)        
-        })
-        e.preventDefault();
-    })
+</head>
+<body>
     
-  </script>
+
+<div class="container">
+    <div class="brand-logo"></div>
+    <div>
+      <div class="content">
+          <h2>ESCEE </h2>
+          <h2>ESCEE </h2>
+        </div>
+
+    </div>
+    <div class="brand-title">INDUSTRIES PRIVATE LIMITED</div>
+    <div class="inputs">
+      <input type="number" placeholder="heading" />
+      <input type="number" placeholder="heading" />
+      <input type="number" placeholder="heading" />
+      <input type="number" placeholder="heading" />
+      <button type="submit">Submit</button>
+    </div>
+    <a href="https://twitter.com/prathkum">MADE BY NELLAIAPPAN S</a>
+  </div>
+</body>
 </html>
