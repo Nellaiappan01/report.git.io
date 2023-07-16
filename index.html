@@ -8,17 +8,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
         @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-	overflow: hidden;
-}
 
 
 body {
+
+  box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
   margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100vh;
   background: #ecf0f3;
@@ -27,14 +24,13 @@ body {
   text-align: center;
   justify-content: center;
   place-items: center;
-  
-  font-family: poppins;
+  overflow: hidden;
 }
 
 .container {
   position: relative;
   width: 350px;
-  height: 680px;
+  height: 750px;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
@@ -149,7 +145,17 @@ input {
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
-
+.date{
+  margin-top: -105%;
+  margin-left: .4rem;
+  box-shadow: none;
+  font-size:10px;
+  width: 80%;
+  padding: 0;
+  position: absolute;
+  color:rgb(160, 159, 160);
+  background-color: transparent;
+}
 button {
   color: white;
   margin-top: 20px;
@@ -209,7 +215,11 @@ h1 {
       <input type="number" placeholder="heading" />
       <button type="submit">Submit</button>
     </div>
+    <input class = "date" name="date" id="date">
     <a href="https://twitter.com/prathkum">MADE BY NELLAIAPPAN S</a>
   </div>
 </body>
+<script type="text/javascript">
+  document.getElementById('date').value = Date();
+</script>
 </html>
